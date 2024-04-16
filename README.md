@@ -2,6 +2,9 @@
 
 Authors: Rock Zgutowicz, Derrick Dischinger, Minh Tong, Leni Roeser
 
+Docker container: 
+https://hub.docker.com/repository/docker/sussygirlboss/team-010-43-hw4-extension/general
+
 This project is about using the principle rules of software design to add features to an existing codebase while maintaining a modular system. The codebase, before we began, allowed a user to schedule packages to be delivered to robots via drone. Through the interface, the location of the package and the robot can be chosen, as well as the pathing strategy for the drone to use on the way to the robot once it picks up the package.
 
 The simulation runs primarily in the SimulationModel class, where IEntities (the moveable objects) are created. Each entity (robot, drone, and package), inherits from this IEntity class, which gives them all attributes such as location, name, direction, rotate, and details, along with functions with which to access these protected variables. When the simulation begins, SimulationModel calls upon the entity factories like DroneFactory and HumanFactory that extend IEntityFactory to create entities that exist on start like a helicopter that flies around, a human, and the drone.
